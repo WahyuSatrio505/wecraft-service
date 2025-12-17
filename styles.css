@@ -1,0 +1,317 @@
+        :root {
+            --bg-dark: #0B0F19;
+            --bg-card: #111827;
+            --primary: #6366f1; /* Indigo */
+            --accent: #0ea5e9; /* Sky Blue */
+            --glow: rgba(99, 102, 241, 0.5);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Outfit', sans-serif;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            letter-spacing: -0.02em;
+        }
+
+        /* --- BACKGROUND ANIMATION (The "Wild" Part) --- */
+        .ambient-light {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            background: 
+                radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.08), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(14, 165, 233, 0.08), transparent 25%);
+        }
+
+        .grid-lines {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: linear-gradient(var(--border) 1px, transparent 1px),
+            linear-gradient(90deg, var(--border) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.1;
+            z-index: -2;
+            mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
+        }
+
+        /* --- NAVBAR --- */
+        .navbar {
+            background: rgba(11, 15, 25, 0.6);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 1.2rem 0;
+            transition: all 0.3s;
+        }
+        
+        .nav-link {
+            color: var(--text-muted) !important;
+            font-weight: 500;
+            transition: 0.3s;
+            position: relative;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: white !important;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0; height: 2px;
+            bottom: 0; left: 0;
+            background: var(--accent);
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::after { width: 100%; }
+
+        .btn-glow {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border: none;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-glow:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(14, 165, 233, 0.6);
+            color: white;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.1;
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* --- BENTO GRID CARDS --- */
+        .bento-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 2rem;
+            height: 100%;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .bento-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.06), transparent 40%);
+            z-index: 2;
+            opacity: 0;
+            transition: opacity 0.5s;
+            pointer-events: none;
+        }
+
+        .bento-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(99, 102, 241, 0.3);
+            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.5);
+        }
+        
+        .bento-card:hover::before { opacity: 1; }
+
+        .icon-square {
+            width: 50px; height: 50px;
+            background: rgba(99, 102, 241, 0.1);
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            color: var(--accent);
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* --- STATS COUNTER --- */
+        .stat-card {
+            background: rgba(255,255,255,0.03);
+            border-left: 3px solid var(--accent);
+            padding: 20px;
+        }
+
+        /* --- PRICING TOGGLE --- */
+        .pricing-switch {
+            background: rgba(255,255,255,0.05);
+            border-radius: 50px;
+            padding: 5px;
+            display: inline-flex;
+            position: relative;
+        }
+        
+        .pricing-label {
+            padding: 10px 25px;
+            border-radius: 50px;
+            cursor: pointer;
+            z-index: 2;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+        
+        .pricing-label.active { color: white; }
+        .pricing-label:not(.active) { color: var(--text-muted); }
+
+        .switch-bg {
+            position: absolute;
+            top: 5px; left: 5px;
+            height: calc(100% - 10px);
+            width: 50%;
+            background: var(--primary);
+            border-radius: 50px;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            border-top: 1px solid var(--border);
+            background: #05080f;
+        }
+
+        /* --- UTILS --- */
+        .border-glow {
+            box-shadow: 0 0 15px var(--glow);
+            border-color: var(--primary) !important;
+        }
+
+        /* Animasi Ketik */
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 1s infinite;
+        }
+        @keyframes blink { 50% { opacity: 0; } }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.5rem; }
+            .bento-card { padding: 1.5rem; }
+        }
+        
+        /* Floating Whatsapp */
+        .float-wa {
+            position: fixed;
+            bottom: 30px; right: 30px;
+            width: 60px; height: 60px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 100;
+            transition: 0.3s;
+        }
+        .float-wa:hover { transform: scale(1.1); color: white; }
+
+
+        /* service */
+            /* --- Service Card Styling --- */
+    .service-card-pro {
+        background: rgba(30, 41, 59, 0.7); /* Slate-800 with opacity */
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border-radius: 24px;
+        padding: 2.5rem;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    /* Glow Effect on Hover */
+    .service-card-pro::before {
+        content: '';
+        position: absolute;
+        top: 0; left: -100%; width: 100%; height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+        transition: 0.5s;
+    }
+    
+    .service-card-pro:hover::before { left: 100%; }
+
+    /* Specific Glow Colors per Card */
+    .card-landing:hover { border-color: #ec4899; box-shadow: 0 10px 40px -10px rgba(236, 72, 153, 0.3); }
+    .card-compro:hover { border-color: #6366f1; box-shadow: 0 10px 40px -10px rgba(99, 102, 241, 0.3); }
+    .card-store:hover { border-color: #22c55e; box-shadow: 0 10px 40px -10px rgba(34, 197, 94, 0.3); }
+
+    .icon-wrapper-pro {
+        width: 70px; height: 70px;
+        border-radius: 20px;
+        display: flex; align-items: center; justify-content: center;
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        background: rgba(255,255,255,0.05);
+        transition: 0.3s;
+    }
+
+    .card-landing .icon-wrapper-pro { color: #ec4899; }
+    .card-compro .icon-wrapper-pro { color: #6366f1; }
+    .card-store .icon-wrapper-pro { color: #22c55e; }
+
+    .service-card-pro:hover .icon-wrapper-pro { transform: scale(1.1) rotate(5deg); background: rgba(255,255,255,0.1); }
+
+    /* Button Styling */
+    .btn-detail-trigger {
+        background: transparent;
+        border: 1px solid rgba(255,255,255,0.2);
+        color: white;
+        width: 100%;
+        padding: 12px;
+        border-radius: 50px;
+        font-weight: 500;
+        transition: 0.3s;
+        display: flex; justify-content: center; align-items: center; gap: 10px;
+    }
+
+    .btn-detail-trigger:hover {
+        background: white;
+        color: black;
+        border-color: white;
+    }
+
+    /* Offcanvas Customization (Dark Mode) */
+    .offcanvas-dark-glass {
+        background: #0f172a;
+        color: white;
+        border-left: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .feature-check i { color: #22c55e; margin-right: 10px; }
+    .tech-badge {
+        font-size: 0.75rem;
+        padding: 5px 12px;
+        border-radius: 50px;
+        background: rgba(255,255,255,0.1);
+        color: #94a3b8;
+        border: 1px solid rgba(255,255,255,0.05);
+    }
