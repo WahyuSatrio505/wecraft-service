@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YuCraft Agency | High-End Web Solutions</title>
+    <title>WeCraft Agency | High-End Web Solutions</title>
     
     <!-- Fonts: Outfit (Modern & Geometri) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles.css">
+    <link rel="stylesheet" href="./assets/dashboard.css">
+    <link rel="stylesheet" href="./assets/bagianSPesifikasi.css">
 
 
 
@@ -33,7 +35,7 @@
                 <div class="bg-primary rounded-3 p-1 d-flex justify-content-center align-items-center" style="width:35px; height:35px;">
                     <i class="bi bi-code-square text-white"></i>
                 </div>
-                <span>YuCraft<span class="text-primary">.</span></span>
+                <span>WeCraft<span class="text-primary">.</span></span>
             </a>
             <button class="navbar-toggler border-0 shadow-none text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <i class="bi bi-list fs-2"></i>
@@ -47,8 +49,8 @@
                     <li class="nav-item"><a class="nav-link" href="#ai-lab">AI Lab <span class="badge bg-primary ms-1" style="font-size: 0.6rem;">BETA</span></a></li>
                 </ul>
                 <div class="d-flex gap-3">
-                    <a href="./portfolio.html" class="btn btn-outline-light rounded-pill px-4 btn-sm d-flex align-items-center">Portofolio</a>
-                    <a href="https://wa.me/6288214728116" class="btn btn-glow btn-sm d-flex align-items-center">Mulai Project</a>
+                    <a href="portfolio.php" class="btn btn-outline-light rounded-pill px-4 btn-sm d-flex align-items-center">Portofolio</a>
+                    <a href="register.php" class="btn btn-glow btn-sm d-flex align-items-center">Mulai Project</a>
                 </div>
             </div>
         </div>
@@ -68,7 +70,7 @@
                         That Scale Business.
                     </h1>
                     <p class="lead text-muted mb-5 w-75">
-                        Bukan sekadar coding. YuCraft menggabungkan <span class="text-white">Estetika Desain</span>, <span class="text-white">Psikologi User</span>, dan <span class="text-white">Teknologi Modern</span> untuk menciptakan website yang menjual.
+                        Bukan sekadar coding. WeCraft menggabungkan <span class="text-white">Estetika Desain</span>, <span class="text-white">Psikologi User</span>, dan <span class="text-white">Teknologi Modern</span> untuk menciptakan website yang menjual.
                     </p>
                     <div class="d-flex flex-wrap gap-3">
                         <a href="#pricing" class="btn btn-glow btn-lg px-5">Lihat Paket</a>
@@ -88,34 +90,35 @@
                     </div>
                 </div>
 
-                <div class="col-lg-5 position-relative" data-aos="zoom-in" data-aos-duration="1200">
-                    <!-- Abstract Visual Element -->
-                    <div class="position-relative z-1">
-                         <!-- Glassmorphic Card Mockup -->
-                        <div class="bento-card p-0 border-0 shadow-lg overflow-hidden" style="transform: rotate(-3deg); margin-bottom: -50px; margin-right: -20px; opacity: 0.8;">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="img-fluid opacity-50">
-                        </div>
-                        <div class="bento-card p-4 border-glow bg-dark" style="transform: rotate(2deg);">
-                            <div class="d-flex justify-content-between mb-4 border-bottom border-white border-opacity-10 pb-3">
+               
+                                <!-- Sisi Kanan: Slider Gambar Otomatis -->
+                <div class="col-lg-5 hero-right-content">
+                    <div class="position-relative">
+                        <!-- Glow Dekoratif Latar Belakang -->
+                        <div class="slider-glow"></div>
+                        
+                        <!-- Kontainer Utama Slider -->
+                        <div class="slider-wrapper" data-aos="zoom-in" data-aos-duration="1200">
+                            <!-- Kamu bisa ganti URL gambar di bawah ini sesuai keinginan -->
+                            <img src="./img/1.jpg" class="slider-image active" alt="Proyek 1">
+                            <img src="./img/2.jpg" class="slider-image" alt="Proyek 2">
+                            <img src="./img/3.jpg" class="slider-image" alt="Proyek 3">
+                            <img src="./img/4.jpg" class="slider-image" alt="Proyek 4">
+
+                            <!-- Overlay Gradient -->
+                            <div class="slider-overlay">
                                 <div>
-                                    <small class="text-muted d-block">Total Visits</small>
-                                    <h4 class="fw-bold m-0 text-white">124,500</h4>
-                                </div>
-                                <div class="text-success">
-                                    <i class="bi bi-graph-up-arrow"></i> +24%
+                                    <h5 class="fw-bold text-white mb-0">Crafted with Precision</h5>
+                                    <small class="text-white-50">Our Latest Portfolio Showcase</small>
                                 </div>
                             </div>
-                            <div class="d-flex align-items-center gap-3 mb-3">
-                                <div class="progress w-100" style="height: 6px; background: rgba(255,255,255,0.1);">
-                                    <div class="progress-bar bg-primary" style="width: 75%"></div>
-                                </div>
-                                <small class="text-muted">SEO</small>
-                            </div>
-                            <div class="d-flex align-items-center gap-3">
-                                <div class="progress w-100" style="height: 6px; background: rgba(255,255,255,0.1);">
-                                    <div class="progress-bar bg-accent" style="width: 90%"></div>
-                                </div>
-                                <small class="text-muted">Speed</small>
+
+                            <!-- Indikator Dot -->
+                            <div class="slider-dots">
+                                <div class="dot active"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
                             </div>
                         </div>
                     </div>
@@ -129,20 +132,20 @@
         <div class="container">
             <div class="row text-center g-4">
                 <div class="col-6 col-md-3">
-                    <h2 class="fw-bold text-white display-5 m-0 counter" data-target="50">0</h2>
-                    <small class="text-accent text-uppercase ls-1">Projects Done</small>
+                    <h2 class="fw-bold text-white display-5 m-0 counter" data-target="75">0</h2>
+                    <small class="text-accent text-uppercase ls-1">Project Terselesaikan</small>
                 </div>
                 <div class="col-6 col-md-3">
-                    <h2 class="fw-bold text-white display-5 m-0 counter" data-target="1200">0</h2>
-                    <small class="text-accent text-uppercase ls-1">Hours Coding</small>
+                    <h2 class="fw-bold text-white display-5 m-0 counter" data-target="1975">0</h2>
+                    <small class="text-accent text-uppercase ls-1">Pengkodean Jam</small>
                 </div>
                 <div class="col-6 col-md-3">
                     <h2 class="fw-bold text-white display-5 m-0 counter" data-target="98">0</h2>
-                    <small class="text-accent text-uppercase ls-1">% Satisfaction</small>
+                    <small class="text-accent text-uppercase ls-1">Tingkat Kepuasan</small>
                 </div>
                 <div class="col-6 col-md-3">
-                    <h2 class="fw-bold text-white display-5 m-0 counter" data-target="4">0</h2>
-                    <small class="text-accent text-uppercase ls-1">Years Exp</small>
+                    <h2 class="fw-bold text-white display-5 m-0 counter" data-target="4.7">0</h2>
+                    <small class="text-accent text-uppercase ls-1">Tahun Penggalaman</small>
                 </div>
             </div>
         </div>
@@ -153,7 +156,7 @@
         <div class="container">
             <div class="row mb-5">
                 <div class="col-lg-6">
-                    <span class="text-primary fw-bold text-uppercase ls-1">Kenapa YuCraft?</span>
+                    <span class="text-primary fw-bold text-uppercase ls-1">Kenapa WeCraft?</span>
                     <h2 class="display-5 fw-bold mt-2">Bukan Sekadar Website,<br>Ini Aset Digital.</h2>
                 </div>
                 <div class="col-lg-6 d-flex align-items-end">
@@ -172,7 +175,7 @@
                         </div>
                         <div class="bg-dark rounded-3 p-3 border border-white border-opacity-10" style="min-width: 200px;">
                             <div class="d-flex justify-content-between mb-2">
-                                <span class="text-white">YuCraft</span>
+                                <span class="text-white">WeCraft</span>
                                 <span class="text-success fw-bold">0.8s</span>
                             </div>
                             <div class="progress mb-3" style="height: 5px;"><div class="progress-bar bg-success" style="width: 90%"></div></div>
@@ -200,7 +203,7 @@
                     <div class="bento-card">
                         <div class="icon-square"><i class="bi bi-phone"></i></div>
                         <h3>Mobile Obsessed</h3>
-                        <p class="text-muted">70% trafik dari HP. Desain kami "Jempol Friendly" & responsif.</p>
+                        <p class="text-muted">Mobile-First Design yang adaptif. Layout ringan dan presisi, memastikan website tampil sempurna di berbagai ukuran layar smartphone.</p>
                     </div>
                 </div>
 
@@ -209,8 +212,8 @@
                     <div class="bento-card position-relative overflow-hidden">
                         <div class="position-relative z-1">
                             <div class="icon-square"><i class="bi bi-search"></i></div>
-                            <h3>SEO Optimized Core</h3>
-                            <p class="text-muted w-75">Struktur HTML5 semantik, Schema Markup, dan Meta Tags yang disukai Google agar website mudah naik ranking 1.</p>
+                            <h3>Scalable & Modular Architecture</h3>
+                            <p class="text-muted w-75">Arsitektur kode modular berbasis Clean Code standar industri. Menjamin sistem tetap stabil saat trafik tinggi dan sangat mudah dikembangkan untuk jangka panjang.</p>
                         </div>
                         <i class="bi bi-graph-up text-white opacity-05 position-absolute" style="font-size: 15rem; right: -50px; bottom: -80px; transform: rotate(-10deg);"></i>
                     </div>
@@ -252,11 +255,98 @@
                             <span class="tech-badge">CTA Focus</span>
                         </div>
                     </div>
-                    <button class="btn btn-detail-trigger" onclick="openServiceDetail('landing')">
-                        Lihat Spesifikasi <i class="bi bi-arrow-right"></i>
+                    <button class="btn btn-detail-trigger" data-bs-toggle="modal" data-bs-target="#modalLandingPage">
+                     Lihat Spesifikasi <i class="bi bi-arrow-right"></i>
                     </button>
                 </div>
             </div>
+            <!-- ini untuk spesifikai LP -->
+             <div class="modal fade" id="modalLandingPage" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content modal-content-premium text-white">
+            <div class="modal-header border-0 pb-0 pt-4 px-4">
+                <div>
+                    <span class="badge bg-primary mb-2" style="font-size: 0.7rem;">CONVERSION ORIENTED</span>
+                    <h4 class="modal-title fw-bold">Landing Page <span class="text-gradient-blue">Specification</span></h4>
+                </div>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body p-4">
+                <div class="row g-4">
+                    <div class="col-md-5">
+                        <div class="mb-4">
+                            <h6 class="fw-bold mb-3 d-flex align-items-center">
+                                <i class="bi bi-cpu me-2 text-info"></i> Core Engine
+                            </h6>
+                            <div class="small text-muted mb-3">Dibangun untuk performa maksimal dengan skor optimasi tinggi.</div>
+                            <ul class="list-unstyled">
+                                <li class="mb-2 d-flex align-items-center small">
+                                    <i class="bi bi-lightning-fill text-warning me-2"></i> LCP < 1.2s (Ultra Fast Load)
+                                </li>
+                                <li class="mb-2 d-flex align-items-center small">
+                                    <i class="bi bi-shield-lock-fill text-success me-2"></i> SSL & Anti-Brute Force
+                                </li>
+                                <li class="mb-2 d-flex align-items-center small">
+                                    <i class="bi bi-search text-info me-2"></i> SEO Semantic Structure
+                                </li>
+                                <li class="mb-2 d-flex align-items-center small">
+                                    <i class="bi bi-phone text-primary me-2"></i> 100% Responsive Layout
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-7 border-start border-secondary border-opacity-25">
+                        <h6 class="fw-bold mb-3 d-flex align-items-center">
+                            <i class="bi bi-graph-up-arrow me-2 text-info"></i> Marketing & Sales Tools
+                        </h6>
+                        <div class="row g-2">
+                            <div class="col-12">
+                                <div class="spec-feature-card p-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="icon-box-small me-3"><i class="bi bi-funnel"></i></div>
+                                        <div>
+                                            <div class="fw-bold small">Direct Sales Funnel</div>
+                                            <div class="text-muted" style="font-size: 0.75rem;">Navigasi tanpa hambatan untuk memandu user langsung ke tombol order.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="spec-feature-card p-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="icon-box-small me-3"><i class="bi bi-chat-dots"></i></div>
+                                        <div>
+                                            <div class="fw-bold small">CRM Integration</div>
+                                            <div class="text-muted" style="font-size: 0.75rem;">Integrasi otomatis ke WhatsApp, Email Marketing, atau Database.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="spec-feature-card p-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="icon-box-small me-3"><i class="bi bi-pie-chart"></i></div>
+                                        <div>
+                                            <div class="fw-bold small">Analytics Ready</div>
+                                            <div class="text-muted" style="font-size: 0.75rem;">Sudah termasuk pemasangan Google Analytics & FB Pixel.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer border-0 p-4 pt-0">
+                <button type="button" class="btn btn-link text-white text-decoration-none btn-sm" data-bs-dismiss="modal">Nanti Saja</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end 1 -->
 
             <!-- Service 2: Company Profile -->
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
@@ -273,11 +363,84 @@
                             <span class="tech-badge">Email Bisnis</span>
                         </div>
                     </div>
-                    <button class="btn btn-detail-trigger" onclick="openServiceDetail('compro')">
-                        Lihat Spesifikasi <i class="bi bi-arrow-right"></i>
+                                        <button class="btn btn-detail-trigger" data-bs-toggle="modal" data-bs-target="#modalCompanyProfile">
+                     Lihat Spesifikasi <i class="bi bi-arrow-right"></i>
                     </button>
                 </div>
             </div>
+            <!-- ini untuk CP -->
+             <div class="modal fade" id="modalCompanyProfile" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content modal-content-premium text-white">
+            <div class="modal-header border-0 pb-0 pt-4 px-4">
+                <div>
+                    <span class="badge bg-info mb-2" style="font-size: 0.7rem;">CORPORATE IDENTITY</span>
+                    <h4 class="modal-title fw-bold">Company Profile <span class="text-gradient-blue">Specification</span></h4>
+                </div>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body p-4">
+                <div class="row g-4">
+                    <div class="col-md-5">
+                        <div class="mb-4">
+                            <h6 class="fw-bold mb-3 d-flex align-items-center">
+                                <i class="bi bi-layers me-2 text-info"></i> Architecture
+                            </h6>
+                            <div class="small text-muted mb-3">Struktur multi-halaman untuk informasi perusahaan yang komprehensif.</div>
+                            <ul class="list-unstyled">
+                                <li class="mb-2 d-flex align-items-center small">
+                                    <i class="bi bi-diagram-3-fill text-primary me-2"></i> Dynamic Multi-Page (Home, About, Services, etc)
+                                </li>
+                                <li class="mb-2 d-flex align-items-center small">
+                                    <i class="bi bi-envelope-at-fill text-success me-2"></i> Business Email Integration (name@company.com)
+                                </li>
+                                <li class="mb-2 d-flex align-items-center small">
+                                    <i class="bi bi-google text-warning me-2"></i> Google Maps & SEO Basic Setup
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-7 border-start border-secondary border-opacity-25">
+                        <h6 class="fw-bold mb-3 d-flex align-items-center">
+                            <i class="bi bi-award me-2 text-info"></i> Branding Tools
+                        </h6>
+                        <div class="row g-2">
+                            <div class="col-12">
+                                <div class="spec-feature-card p-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="icon-box-small me-3"><i class="bi bi-images"></i></div>
+                                        <div>
+                                            <div class="fw-bold small">Premium Portfolio Gallery</div>
+                                            <div class="text-muted" style="font-size: 0.75rem;">Showcase hasil kerja atau proyek perusahaan dengan filter kategori.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="spec-feature-card p-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="icon-box-small me-3"><i class="bi bi-people"></i></div>
+                                        <div>
+                                            <div class="fw-bold small">Team & Careers Section</div>
+                                            <div class="text-muted" style="font-size: 0.75rem;">Kelola profil tim profesional dan informasi lowongan kerja aktif.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer border-0 p-4 pt-0">
+                <button type="button" class="btn btn-link text-white text-decoration-none btn-sm" data-bs-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end 2 -->
 
             <!-- Service 3: E-Commerce -->
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
@@ -294,11 +457,83 @@
                             <span class="tech-badge">Whatsapp API</span>
                         </div>
                     </div>
-                    <button class="btn btn-detail-trigger" onclick="openServiceDetail('store')">
-                        Lihat Spesifikasi <i class="bi bi-arrow-right"></i>
-                    </button>
+                    <button class="btn btn-detail-trigger" data-bs-toggle="modal" data-bs-target="#modalTokoOnline">
+                     Lihat Spesifikasi <i class="bi bi-arrow-right"></i>
                 </div>
             </div>
+            <!-- untuk Tokline -->
+             <div class="modal fade" id="modalTokoOnline" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content modal-content-premium text-white">
+            <div class="modal-header border-0 pb-0 pt-4 px-4">
+                <div>
+                    <span class="badge bg-success mb-2" style="font-size: 0.7rem;">E-COMMERCE READY</span>
+                    <h4 class="modal-title fw-bold">Toko Online <span class="text-gradient-blue">Specification</span></h4>
+                </div>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body p-4">
+                <div class="row g-4">
+                    <div class="col-md-5">
+                        <div class="mb-4">
+                            <h6 class="fw-bold mb-3 d-flex align-items-center">
+                                <i class="bi bi-cart-check me-2 text-info"></i> Commerce Engine
+                            </h6>
+                            <div class="small text-muted mb-3">Sistem belanja otomatis yang bekerja 24 jam untuk bisnis Anda.</div>
+                            <ul class="list-unstyled">
+                                <li class="mb-2 d-flex align-items-center small">
+                                    <i class="bi bi-box-seam-fill text-warning me-2"></i> Inventory Management (Stok Otomatis)
+                                </li>
+                                <li class="mb-2 d-flex align-items-center small">
+                                    <i class="bi bi-truck text-primary me-2"></i> Auto Shipping (Integrasi RajaOngkir/API)
+                                </li>
+                                <li class="mb-2 d-flex align-items-center small">
+                                    <i class="bi bi-credit-card-2-front-fill text-success me-2"></i> Payment Gateway (Midtrans Ready)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-7 border-start border-secondary border-opacity-25">
+                        <h6 class="fw-bold mb-3 d-flex align-items-center">
+                            <i class="bi bi-lightning-charge me-2 text-info"></i> Sales Booster
+                        </h6>
+                        <div class="row g-2">
+                            <div class="col-12">
+                                <div class="spec-feature-card p-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="icon-box-small me-3"><i class="bi bi-tags"></i></div>
+                                        <div>
+                                            <div class="fw-bold small">Flash Sale & Coupon System</div>
+                                            <div class="text-muted" style="font-size: 0.75rem;">Tingkatkan urgensi belanja dengan fitur diskon terbatas dan kupon.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="spec-feature-card p-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="icon-box-small me-3"><i class="bi bi-whatsapp"></i></div>
+                                        <div>
+                                            <div class="fw-bold small">WhatsApp Checkout</div>
+                                            <div class="text-muted" style="font-size: 0.75rem;">Kirim data pesanan langsung ke admin via WA (Tanpa ribet ketik ulang).</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer border-0 p-4 pt-0">
+                <button type="button" class="btn btn-link text-white text-decoration-none btn-sm" data-bs-dismiss="modal">Tutup</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- bagia end 3 -->
 
         </div>
     </div>
@@ -331,7 +566,7 @@
                             <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Hosting Standar</li>
                             <li><i class="bi bi-check-circle-fill text-primary me-2"></i>Tombol WA Order</li>
                         </ul>
-                        <a href="https://wa.me/6288214728116?text=Halo%20YuCraft%20saya%20tertarik%20paket%20Starter" class="btn btn-outline-light w-100 rounded-pill py-2">Pilih Paket</a>
+                        <a href="checkout.php?paket=UMKM Starter&harga=450000" class="btn btn-outline-light w-100 rounded-pill py-2">Pilih Paket</a>
                     </div>
                 </div>
 
@@ -350,52 +585,13 @@
                             <li><i class="bi bi-check-circle-fill text-accent me-2"></i>SEO Basic Setup</li>
                             <li><i class="bi bi-check-circle-fill text-accent me-2"></i>Akun Email Bisnis</li>
                         </ul>
-                        <a href="https://wa.me/6288214728116?text=Halo%20YuCraft%20saya%20tertarik%20paket%20Business" class="btn btn-glow w-100 py-2">Pilih Paket</a>
+                        <a href="checkout.php?paket=Business Pro&harga=900000" class="btn btn-glow w-100 py-2">Pilih Paket</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Comparison Section (Why vs Others) -->
-    <section class="py-5 bg-black bg-opacity-30">
-        <div class="container">
-            <h3 class="text-center fw-bold mb-5">Kenapa Harus YuCraft?</h3>
-            <div class="table-responsive">
-                <table class="table table-dark table-hover border border-white border-opacity-10 align-middle">
-                    <thead>
-                        <tr class="text-center">
-                            <th class="py-3 text-start ps-4 text-muted w-25">Fitur</th>
-                            <th class="py-3 bg-primary bg-opacity-10 text-primary border-bottom-0"><i class="bi bi-star-fill me-2"></i>YuCraft</th>
-                            <th class="py-3 text-muted">Freelancer Lain</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-center">
-                        <tr>
-                            <td class="text-start ps-4 fw-bold">Kecepatan Loading</td>
-                            <td class="bg-primary bg-opacity-10 text-white fw-bold">< 2 Detik (Optimasi)</td>
-                            <td class="text-muted">Tergantung Template</td>
-                        </tr>
-                        <tr>
-                            <td class="text-start ps-4 fw-bold">Desain UI/UX</td>
-                            <td class="bg-primary bg-opacity-10 text-white fw-bold">Custom & Modern</td>
-                            <td class="text-muted">Template Pasaran</td>
-                        </tr>
-                        <tr>
-                            <td class="text-start ps-4 fw-bold">Garansi Revisi</td>
-                            <td class="bg-primary bg-opacity-10 text-white fw-bold">Sampai Puas (Minor)</td>
-                            <td class="text-muted">Terbatas / Bayar Lagi</td>
-                        </tr>
-                        <tr>
-                            <td class="text-start ps-4 fw-bold">Support After Sales</td>
-                            <td class="bg-primary bg-opacity-10 text-white fw-bold">30 Hari Gratis</td>
-                            <td class="text-muted">Hit & Run (Kabur)</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
 
     <!-- AI Lab Section (Feature Rich) -->
     <section id="ai-lab" class="py-5 position-relative overflow-hidden">
@@ -485,12 +681,11 @@
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4">
-                    <h3 class="fw-bold mb-3">YuCraft<span class="text-primary">.</span></h3>
-                    <p class="text-muted">Digital Agency yang dikelola oleh Mahasiswa TI berdedikasi. Kami membantu UMKM & Bisnis Go Digital dengan cara yang benar.</p>
+                    <h3 class="fw-bold mb-3">WeCraft<span class="text-primary">.</span></h3>
+                    <p class="text-muted">Inisiatif mahasiswa TI untuk Menggabungkan standar rekayasa perangkat lunak modern dengan strategi digital guna memastikan bisnis Anda tumbuh secara berkelanjutan</p>
                     <div class="d-flex gap-3 mt-4">
-                        <a href="#" class="text-white fs-5"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-white fs-5"><i class="bi bi-github"></i></a>
-                        <a href="#" class="text-white fs-5"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://www.instagram.com/wecraft4433?igsh=a2F1MWhvcnBjZXkx" class="text-white fs-5"><i class="bi bi-instagram"></i></a>
+                        <a href="https://github.com/WahyuSatrio505" class="text-white fs-5"><i class="bi bi-github"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-2 offset-lg-1">
@@ -511,19 +706,19 @@
                 </div>
                 <div class="col-lg-3">
                     <h5 class="fw-bold text-white mb-3">Kontak</h5>
-                    <p class="text-muted mb-1">Karanganyar, Jawa Tengah</p>
-                    <p class="text-muted mb-1">wahyu@mahasiswa.id</p>
+                    <p class="text-muted mb-1">Surakarta, Jawa Tengah</p>
+                    <p class="text-muted mb-1">PunyaKita@gmail.com</p>
                     <a href="https://wa.me/6288214728116" class="text-primary text-decoration-none fw-bold">+62 882-1472-8116</a>
                 </div>
             </div>
             <div class="border-top border-white border-opacity-10 mt-5 pt-4 text-center text-muted small">
-                &copy; 2025 YuCraft Agency. Coded with <i class="bi bi-heart-fill text-danger"></i> by WahyuDev.
+                &copy; 2026 WeCraft Agency. Coded with <i class="bi bi-heart-fill text-danger"></i> by PunyaKita.
             </div>
         </div>
     </footer>
 
     <!-- Floating Whatsapp -->
-    <a href="https://wa.me/6288214728116?text=Halo%20YuCraft,%20saya%20mau%20konsultasi%20website" class="float-wa" target="_blank">
+    <a href="https://wa.me/6288214728116?text=Halo%20WeCraft,%20saya%20mau%20konsultasi%20website" class="float-wa" target="_blank">
         <i class="bi bi-whatsapp"></i>
     </a>
 
@@ -531,6 +726,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./assets/index.js"></script>
+    <script src="./assets/apigen.js"></script>
+    <script src="./assets/animasifoto.js"></script>
 
     <!-- end -->
 </body>

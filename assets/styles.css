@@ -315,3 +315,92 @@
         color: #94a3b8;
         border: 1px solid rgba(255,255,255,0.05);
     }
+
+    /* untuk ai */
+    /* WeCraft AI Lab - Custom Styles */
+
+/* Efek Bento Card dengan Glassmorphism */
+.bento-card {
+    background: rgba(22, 27, 34, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.bento-card:hover {
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Border Glow Effect */
+.border-glow {
+    position: relative;
+    z-index: 1;
+}
+
+.border-glow::after {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    background: linear-gradient(45deg, #3b82f6, transparent, #8b5cf6);
+    border-radius: inherit;
+    z-index: -1;
+    opacity: 0.2;
+    transition: opacity 0.3s;
+}
+
+.border-glow:hover::after {
+    opacity: 0.5;
+}
+
+/* Custom Scrollbar untuk Terminal */
+#aiOutput::-webkit-scrollbar {
+    width: 4px;
+}
+
+#aiOutput::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#aiOutput::-webkit-scrollbar-thumb {
+    background: rgba(59, 130, 246, 0.2);
+    border-radius: 10px;
+}
+
+/* Efek Berkedip Kursor Terminal */
+#aiOutput::after {
+    content: '_';
+    animation: blink 1s infinite;
+    color: #4ade80;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Animasi Pulse untuk Loading */
+.animate-pulse-blue {
+    animation: pulse-blue 2s infinite;
+}
+
+@keyframes pulse-blue {
+    0% { color: rgba(59, 130, 246, 0.5); }
+    50% { color: rgba(59, 130, 246, 1); }
+    100% { color: rgba(59, 130, 246, 0.5); }
+}
+
+/* Tombol Generate Glow */
+.btn-ai-generate {
+    background: #ffffff;
+    color: #000000;
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+    transition: all 0.3s ease;
+}
+
+.btn-ai-generate:hover {
+    background: #3b82f6;
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+    transform: translateY(-2px);
+}

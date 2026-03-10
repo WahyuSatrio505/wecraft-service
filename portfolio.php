@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portofolio YuCraft | Our Masterpieces</title>
+    <title>Portofolio WeCraft | Our Masterpieces</title>
     
     <!-- Fonts: Outfit & Space Grotesk -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -143,6 +143,19 @@
             border: 1px solid var(--border);
         }
 
+        .btn-glow {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border: none;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s;
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+        }
+
         /* Loading Animation Override */
         .fade-in { animation: fadeIn 0.5s ease-in; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
@@ -157,22 +170,22 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="./index.html">
+            <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" href="./index.php">
                 <div class="bg-primary rounded-3 p-1 d-flex justify-content-center align-items-center" style="width:35px; height:35px;">
                     <i class="bi bi-code-square text-white"></i>
                 </div>
-                <span>YuCraft<span class="text-primary">.</span></span>
+                <span>WeCraft<span class="text-primary">.</span></span>
             </a>
             <button class="navbar-toggler border-0 shadow-none text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <i class="bi bi-list fs-2"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="./index.html">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="#">Portofolio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./index.html#pricing">Harga</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.php">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="portfolio.php">Portofolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./index.php#pricing">Harga</a></li>
                 </ul>
-                <a href="https://wa.me/6288214728116" class="btn btn-primary rounded-pill px-4 btn-sm fw-bold">Hire Me</a>
+                    <a href="register.php" class="btn btn-glow btn-sm d-flex align-items-center">Mulai Project</a>
             </div>
         </div>
     </nav>
@@ -191,7 +204,7 @@
                 <button class="filter-btn active" onclick="filterProjects('all')">Semua</button>
                 <button class="filter-btn" onclick="filterProjects('landing')">Landing Page</button>
                 <button class="filter-btn" onclick="filterProjects('compro')">Company Profile</button>
-                <button class="filter-btn" onclick="filterProjects('webapp')">Web App / System</button>
+                <button class="filter-btn" onclick="filterProjects('ecom')">Toko Online</button>
             </div>
         </div>
     </section>
@@ -205,16 +218,16 @@
                 <div class="col-lg-4 col-md-6 portfolio-item" data-category="landing">
                     <div class="project-card h-100" data-aos="fade-up">
                         <div class="card-img-wrapper">
-                            <img src="" class="card-img" alt="Project">
+                            <img src="./img/harmoni.png" class="card-img" alt="Project">
                             <div class="card-overlay">
-                                <a href="#" class="btn btn-light rounded-pill px-4 fw-bold">Live Demo <i class="bi bi-arrow-up-right ms-1"></i></a>
+                                <a href="https://harmony-v2-two.vercel.app/" class="btn btn-light rounded-pill px-4 fw-bold">Live Demo <i class="bi bi-arrow-up-right ms-1"></i></a>
                             </div>
                         </div>
                         <div class="p-4">
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <div>
                                     <span class="text-accent small fw-bold text-uppercase ls-1">Landing Page</span>
-                                    <h4 class="text-white fw-bold m-0 mt-1">Kopi Senja Store</h4>
+                                    <h4 class="text-white fw-bold m-0 mt-1">Harmony Coffe</h4>
                                 </div>
                                 <div class="bg-success bg-opacity-20 text-success p-2 rounded-circle">
                                     <i class="bi bi-cart3"></i>
@@ -231,10 +244,10 @@
                 </div>
 
                 <!-- Project 2: Web App -->
-                <div class="col-lg-4 col-md-6 portfolio-item" data-category="webapp">
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="compro">
                     <div class="project-card h-100" data-aos="fade-up" data-aos-delay="100">
                         <div class="card-img-wrapper">
-                            <img src=".://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img" alt="Project">
+                            <img src="./img/galaksi.png" class="card-img" alt="Project">
                             <div class="card-overlay">
                                 <a href="#" class="btn btn-light rounded-pill px-4 fw-bold">Live Demo <i class="bi bi-arrow-up-right ms-1"></i></a>
                             </div>
@@ -242,14 +255,14 @@
                         <div class="p-4">
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <div>
-                                    <span class="text-primary small fw-bold text-uppercase ls-1">Sistem Informasi</span>
-                                    <h4 class="text-white fw-bold m-0 mt-1">SiAkad Kampus</h4>
+                                    <span class="text-primary small fw-bold text-uppercase ls-1">Company Profile</span>
+                                    <h4 class="text-white fw-bold m-0 mt-1">Stellar Vision</h4>
                                 </div>
                                 <div class="bg-primary bg-opacity-20 text-primary p-2 rounded-circle">
                                     <i class="bi bi-database"></i>
                                 </div>
                             </div>
-                            <p class="text-muted small mb-4">Portal akademik mahasiswa untuk pengisian KRS online, cek nilai, dan manajemen data dosen.</p>
+                            <p class="text-muted small mb-4">Platform eksplorasi antariksa modern yang menyajikan informasi mendalam mengenai planet, rasi bintang, dan misi luar angkasa terbaru.</p>
                             <div class="d-flex flex-wrap gap-2">
                                 <span class="tech-badge">Laravel</span>
                                 <span class="tech-badge">MySQL</span>
@@ -260,25 +273,25 @@
                 </div>
 
                 <!-- Project 3: Compro -->
-                <div class="col-lg-4 col-md-6 portfolio-item" data-category="compro">
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="ecom">
                     <div class="project-card h-100" data-aos="fade-up" data-aos-delay="200">
                         <div class="card-img-wrapper">
-                            <img src=".://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img" alt="Project">
+                            <img src="./img/tapak.png" class="card-img" alt="Project">
                             <div class="card-overlay">
-                                <a href="#" class="btn btn-light rounded-pill px-4 fw-bold">Live Demo <i class="bi bi-arrow-up-right ms-1"></i></a>
+                                <a href="https://umkm-tapak-lokal.vercel.app/" class="btn btn-light rounded-pill px-4 fw-bold">Live Demo <i class="bi bi-arrow-up-right ms-1"></i></a>
                             </div>
                         </div>
                         <div class="p-4">
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <div>
-                                    <span class="text-warning small fw-bold text-uppercase ls-1">Company Profile</span>
-                                    <h4 class="text-white fw-bold m-0 mt-1">Tekno Solusi</h4>
+                                    <span class="text-warning small fw-bold text-uppercase ls-1">Toko Online</span>
+                                    <h4 class="text-white fw-bold m-0 mt-1">Tapak Lokal</h4>
                                 </div>
                                 <div class="bg-warning bg-opacity-20 text-warning p-2 rounded-circle">
                                     <i class="bi bi-building"></i>
                                 </div>
                             </div>
-                            <p class="text-muted small mb-4">Website korporat modern untuk perusahaan IT Consultant dengan desain minimalis dan SEO optimized.</p>
+                            <p class="text-muted small mb-4">Solusi digital untuk ekosistem UMKM: Menghubungkan produsen lokal dengan konsumen melalui antarmuka yang modern, informatif, dan mudah diakses.</p>
                             <div class="d-flex flex-wrap gap-2">
                                 <span class="tech-badge">React</span>
                                 <span class="tech-badge">GSAP</span>
@@ -288,26 +301,26 @@
                     </div>
                 </div>
 
-                <!-- Project 4: Landing Page -->
-                <div class="col-lg-4 col-md-6 portfolio-item" data-category="landing">
+                <!-- Project 4: Company Profile -->
+                <div class="col-lg-4 col-md-6 portfolio-item" data-category="compro">
                     <div class="project-card h-100" data-aos="fade-up" data-aos-delay="300">
                         <div class="card-img-wrapper">
-                            <img src=".://images.unsplash.com/photo-1596526131083-e8c633c948d2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img" alt="Project">
+                            <img src="./img/yucraft.png" class="card-img" alt="Project">
                             <div class="card-overlay">
-                                <a href="#" class="btn btn-light rounded-pill px-4 fw-bold">Live Demo <i class="bi bi-arrow-up-right ms-1"></i></a>
+                                <a href="https://yucraft-app-xi.vercel.app/" class="btn btn-light rounded-pill px-4 fw-bold">Live Demo <i class="bi bi-arrow-up-right ms-1"></i></a>
                             </div>
                         </div>
                         <div class="p-4">
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <div>
-                                    <span class="text-accent small fw-bold text-uppercase ls-1">Landing Page</span>
-                                    <h4 class="text-white fw-bold m-0 mt-1">Rumah Cantik</h4>
+                                    <span class="text-primary small fw-bold text-uppercase ls-1">Company Profile</span>
+                                    <h4 class="text-white fw-bold m-0 mt-1">YuCraft</h4>
                                 </div>
-                                <div class="bg-accent bg-opacity-20 text-accent p-2 rounded-circle">
-                                    <i class="bi bi-house-heart"></i>
+                                <div class="bg-primary bg-opacity-20 text-primary p-2 rounded-circle">
+                                    <i class="bi bi-database"></i>
                                 </div>
                             </div>
-                            <p class="text-muted small mb-4">Promosi perumahan cluster dengan galeri interaktif dan form booking jadwal survey lokasi.</p>
+                            <p class="text-muted small mb-4">Solusi pengembangan web terintegrasi untuk membangun identitas digital yang responsif, modern, dan fungsional bagi perusahaan maupun UMKM.</p>
                             <div class="d-flex flex-wrap gap-2">
                                 <span class="tech-badge">WordPress</span>
                                 <span class="tech-badge">Elementor</span>
@@ -316,65 +329,6 @@
                         </div>
                     </div>
                 </div>
-
-                 <!-- Project 5: Web App -->
-                 <div class="col-lg-4 col-md-6 portfolio-item" data-category="webapp">
-                    <div class="project-card h-100" data-aos="fade-up" data-aos-delay="400">
-                        <div class="card-img-wrapper">
-                            <img src=".://images.unsplash.com/photo-1555421689-d68471e189f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img" alt="Project">
-                            <div class="card-overlay">
-                                <a href="#" class="btn btn-light rounded-pill px-4 fw-bold">Live Demo <i class="bi bi-arrow-up-right ms-1"></i></a>
-                            </div>
-                        </div>
-                        <div class="p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <div>
-                                    <span class="text-primary small fw-bold text-uppercase ls-1">Dashboard</span>
-                                    <h4 class="text-white fw-bold m-0 mt-1">Kasir POS v2</h4>
-                                </div>
-                                <div class="bg-primary bg-opacity-20 text-primary p-2 rounded-circle">
-                                    <i class="bi bi-calculator"></i>
-                                </div>
-                            </div>
-                            <p class="text-muted small mb-4">Aplikasi kasir berbasis web untuk UMKM dengan fitur stok opname, laporan laba rugi, dan thermal print.</p>
-                            <div class="d-flex flex-wrap gap-2">
-                                <span class="tech-badge">Vue.js</span>
-                                <span class="tech-badge">Firebase</span>
-                                <span class="tech-badge">PWA</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                 <!-- Project 6: Compro -->
-                 <div class="col-lg-4 col-md-6 portfolio-item" data-category="compro">
-                    <div class="project-card h-100" data-aos="fade-up" data-aos-delay="500">
-                        <div class="card-img-wrapper">
-                            <img src=".://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="card-img" alt="Project">
-                            <div class="card-overlay">
-                                <a href="#" class="btn btn-light rounded-pill px-4 fw-bold">Live Demo <i class="bi bi-arrow-up-right ms-1"></i></a>
-                            </div>
-                        </div>
-                        <div class="p-4">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <div>
-                                    <span class="text-warning small fw-bold text-uppercase ls-1">Personal Brand</span>
-                                    <h4 class="text-white fw-bold m-0 mt-1">Dr. Gigi Sari</h4>
-                                </div>
-                                <div class="bg-warning bg-opacity-20 text-warning p-2 rounded-circle">
-                                    <i class="bi bi-person-badge"></i>
-                                </div>
-                            </div>
-                            <p class="text-muted small mb-4">Website personal branding untuk dokter gigi dengan fitur booking jadwal praktek online.</p>
-                            <div class="d-flex flex-wrap gap-2">
-                                <span class="tech-badge">Next.js</span>
-                                <span class="tech-badge">Vercel</span>
-                                <span class="tech-badge">Calendly</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
@@ -383,13 +337,12 @@
     <!-- Footer -->
     <footer class="py-5 border-top border-white border-opacity-10 bg-black bg-opacity-30">
         <div class="container text-center">
-            <h4 class="fw-bold mb-3 text-white">YuCraft<span class="text-primary">.</span></h4>
+            <h4 class="fw-bold mb-3 text-white">WeCraft<span class="text-primary">.</span></h4>
             <div class="d-flex justify-content-center gap-4 mb-4">
-                <a href="#" class="text-muted fs-4 hover-white"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="text-muted fs-4 hover-white"><i class="bi bi-github"></i></a>
-                <a href="#" class="text-muted fs-4 hover-white"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.instagram.com/wecraft4433/" class="text-muted fs-4 hover-white"><i class="bi bi-instagram"></i></a>
+                <a href="https://github.com/WahyuSatrio505" class="text-muted fs-4 hover-white"><i class="bi bi-github"></i></a>
             </div>
-            <small class="text-muted">&copy; 2025 YuCraft Portofolio. Created by WahyuDev.</small>
+            <small class="text-muted">&copy; 2025 WeCraft Portofolio. Created by WebPunyaKita.</small>
         </div>
     </footer>
 

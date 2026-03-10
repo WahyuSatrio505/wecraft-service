@@ -1,0 +1,53 @@
+/* Custom Style for WeCraft Premium Modal */
+.modal-content-premium {
+    background: rgba(15, 23, 42, 0.95); /* Slate 900 dengan transparansi */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+.text-gradient-blue {
+    background: linear-gradient(90deg, #38bdf8, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.spec-feature-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+    border-radius: 12px;
+}
+
+.spec-feature-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-3px);
+    border-color: #38bdf8;
+}
+
+.icon-box-small {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: rgba(56, 189, 248, 0.1);
+    color: #38bdf8;
+    font-size: 1.1rem;
+}
+
+.btn-premium {
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+    border: none;
+    padding: 10px 24px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: transform 0.2s;
+}
+
+.btn-premium:hover {
+    transform: scale(1.05);
+    color: white;
+}
