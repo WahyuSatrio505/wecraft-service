@@ -1,0 +1,9 @@
+[33m0a7c545[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: rebase (finish): returning to refs/heads/main
+[33m0a7c545[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{1}: pull origin main --rebase (start): checkout 0a7c54517fbb6dc6de63a4016dd195b294538b17
+[33m9af7629[m HEAD@{2}: Branch: renamed refs/heads/branch to refs/heads/main
+[33m9af7629[m HEAD@{4}: Branch: renamed refs/heads/main to refs/heads/branch
+[33m9af7629[m HEAD@{6}: commit: lalala
+[33m5d11e02[m HEAD@{7}: Branch: renamed refs/heads/main to refs/heads/main
+[33m5d11e02[m HEAD@{9}: commit: kakakaka
+[33m6f9a3b7[m HEAD@{10}: Branch: renamed refs/heads/master to refs/heads/main
+[33m6f9a3b7[m HEAD@{12}: commit (initial): haii
